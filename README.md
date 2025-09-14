@@ -12,11 +12,11 @@ A lightweight **GUI application** for OpenSSL, designed to simplify certificate 
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Screenshots](#screenshots)
-  - [⬇Download](#download)
+  - [Download](#download)
   - [Usage](#usage)
     - [Create a CSR](#create-a-csr)
     - [Convert CSR to P12](#convert-csr-to-p12)
-  - [📄 License](#-license)
+  - [License](#license)
 
 ---
 
@@ -31,7 +31,7 @@ A lightweight **GUI application** for OpenSSL, designed to simplify certificate 
 
 ---
 
-## ⬇Download
+## Download
 1. Go to the [Releases page](https://github.com/muazem7/openssl-gui/releases)  
 2. Download the latest `.zip` release under assets
 3. Extract the zip file anywhere on your computer
@@ -59,5 +59,5 @@ A lightweight **GUI application** for OpenSSL, designed to simplify certificate 
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.

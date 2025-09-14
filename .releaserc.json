@@ -1,0 +1,67 @@
+{
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
+        [
+            "@semantic-release/exec",
+            {
+                "verifyConditionsCmd": "bash ./scripts/verify.sh ",
+                "prepareCmd": "bash ./scripts/prepare.sh ${nextRelease.version}",
+                "publishCmd": "bash ./scripts/publish.sh"
+            }
+        ],
+        [
+            "@semantic-release/github",
+            {
+                "assets": [
+                    {
+                        "path": "./release/bin/openssl-gui-*.zip"
+                    },
+                    {
+                        "path": "./tool_versions.txt"
+                    }
+                ]
+            }
+        ]
+    ],
+    "preset": "angular",
+    "releaseRules": [
+        {
+            "type": "feat",
+            "release": "minor"
+        },
+        {
+            "type": "fix",
+            "release": "patch"
+        },
+        {
+            "type": "perf",
+            "release": "patch"
+        },
+        {
+            "type": "docs",
+            "release": "patch"
+        },
+        {
+            "type": "style",
+            "release": "patch"
+        },
+        {
+            "type": "refactor",
+            "release": "patch"
+        },
+        {
+            "type": "chore",
+            "release": "patch"
+        },
+        {
+            "type": "test",
+            "release": "patch"
+        }
+    ],
+    "tagFormat": "v${version}",
+    "branches": [
+        "main"
+    ]
+}
